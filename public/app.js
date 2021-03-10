@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
       if(description.includes('rain')){rainny.style.display='flex'};
       if(description.includes('moist') || description.includes('haze')){moist.style.display='flex'};
 
-      // Change temprature from harienheight to celsius 
+      // Change temprature from farhrenheit to celsius 
       tempSection.addEventListener('click', ()=>{
         if(texpression.textContent === 'F' ){
           texpression.textContent = 'C';
