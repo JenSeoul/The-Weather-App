@@ -1,0 +1,83 @@
+*{
+    padding:0;
+    box-sizing: border-box;
+    margin:0;
+}
+body{
+    height: 100vh;
+    font-family: sans-serif;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./image/graidentsky.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.location{
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.temperature{
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.temperature{
+    flex-direction: column;
+}
+.degree{
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: -3rem;
+}
+.degree span{
+    margin:10px;
+    font-size: 30px;
+}
+.degree h2{
+    font-size: 40px;
+}
+.temperature-description h2{
+    margin-top: -5rem;
+}
+#anicontainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s ease;
+    margin-left: 2rem;
+    transition: all 1.5s ease;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: upanddown;
+}
+@keyframes upanddown {
+    from {
+      margin-top: 0%;
+      opacity:100%;
+    }
+  
+    to {
+      margin-top: -10%;
+      opacity: 70%;
+    }
+}
+#sunny, #cloudy, #snowy, #partly, #rainy, #misty{
+    font-size: 5rem;
+    color: rgb(253, 253, 253);
+    display:none;
+    pointer-events: none; 
+}
+.animation{
+    opacity: 50%;
+    transform: translateY(-2rem);
+}
