@@ -20,6 +20,7 @@ window.addEventListener('load', () => {
       const api = `weather/${lat},${long}`;
       const res = await fetch(api);
       const data = await res.json();
+      console.log(data)
       const { description } = data.weather[0];
       const {temp} = data.main;
 
@@ -32,7 +33,7 @@ window.addEventListener('load', () => {
       if(description.includes('snow')){snow.style.display='flex'};
       if(description.includes('cloud') || description.includes('part')){cloudy.style.display='flex'};
       if(description.includes('rain')){rainny.style.display='flex'};
-      if(description.includes('moist') || description.includes('haze')){moist.style.display='flex'};
+      if(description.includes('mist') || description.includes('haze')){moist.style.display='flex'};
 
       // Change temprature from farhrenheit to celsius 
       tempSection.addEventListener('click', ()=>{
